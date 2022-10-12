@@ -1,0 +1,46 @@
+<app-loader *ngIf="isLoading"></app-loader>
+<div class="wrapper" *ngIf="!isLoading">
+  <header class="header">
+    <button class="view-icons">
+      <ion-icon name="grid" class="view-icon" (click)="toggleGrid()"></ion-icon>
+      <ion-icon name="menu" class="view-icon" (click)="toggleList()"></ion-icon>
+    </button>
+    <div class="drop-wrappper">
+      <button class="filter-btn" (click)="togglePriceDropdown()">
+        <span class="filter-label">PRICE LOW TO HIGH</span>
+        <ion-icon name="caret-down-outline" class="down-icon"></ion-icon>
+      </button>
+      <ul class="list" *ngIf="toggled" (appOutsideClick)="outsideClick()">
+        <li class="drop-item" (click)="close('ascending')">Low to High</li>
+        <li class="drop-item" (click)="close('descending')">High to Low</li>
+      </ul>
+    </div>
+  </header>
+  <ul
+    class="items-list"
+    [ngClass]="{ listView: !isGrid }"
+    *ngIf="!isLoading && items.length > 0"
+  >
+    <li class="list-item" *ngFor="let item of items | sort: order:price">
+      <div class="product">
+        <div class="image-block">
+          <img src="{{ item.image }}" [alt]="item.name" />
+        </div>
+
+        <div class="features">
+          <p class="name-container">
+            <span class="name">{{ item.name }}</span>
+            <span
+              ><i class="fa-thin fa-heart"></i>
+              <ion-icon name="heart-outline" class="wish-list-icons"></ion-icon>
+            </span>
+          </p>
+          <p class="sub-name">{{ item.subName }}</p>
+          <p class="price-value">
+            &#8377;<strong>{{ item.price }}</strong>
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

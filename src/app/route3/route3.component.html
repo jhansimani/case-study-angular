@@ -1,0 +1,31 @@
+<div class="section-count-down container">
+  <div class="count-down-wrapper">
+    <div>
+      <app-component1
+        #timer
+        [limit]="timeLimit"
+        [isStarted]="isStarted"
+        [resetFlag]="resetted"
+        (pausedAt)="pausedAt($event)"
+      ></app-component1>
+    </div>
+    <div>
+      <app-component2
+        [pauseValues]="pauseValues"
+        (limitValue)="limitValue($event)"
+        (isStarted)="isStart($event)"
+        (isResetted)="reset($event)"
+        (noOfStarts)="noOfStarts($event)"
+        (noOfPauses)="noOfPauses($event)"
+        (capturedTimes)="capturedTimeValues($event)"
+      ></app-component2>
+    </div>
+    <div><app-component3 [captuedTimes]="capturedValues"></app-component3></div>
+    <div>
+      <app-component4
+        [pauseCount]="pauseCount"
+        [startCount]="startCount"
+      ></app-component4>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let key of keys" (click)="operation(key)">
+          {{ key }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of studentList">
+        <td>{{ item.name }}</td>
+        <td>{{ item.class }}</td>
+        <td>{{ item.section }}</td>
+        <td>{{ item.sub1 }}</td>
+        <td>{{ item.sub2 }}</td>
+        <td>{{ item.sub3 }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,79 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: calc(100vh - 6.4rem);
+  width: 100%;
+}
+.left-panel {
+  grid-column: 1/-1;
+  position: relative;
+  display: grid;
+  background-color: #ced4da;
+  padding: 2.4rem 3.2rem 6.4rem 3.2rem;
+  background-color: #ffd43b;
+}
+
+.case-study {
+  margin-bottom: 3.2rem;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.case-study-wrapper {
+  position: relative;
+}
+.first {
+  display: block;
+  line-height: 4.8rem;
+}
+.second {
+  font-size: 4.8rem;
+  color: #555;
+}
+.author {
+  font-size: 1.6rem;
+  font-weight: 400;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #000;
+  /* position: absolute;
+  font-size: 1.6rem;
+  bottom: 4.8rem;
+
+  color: #748ffc;
+
+  right: 10px; */
+}
+.description {
+  display: block;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #555;
+}
+
+.route-description {
+  padding: 2.4rem 3.2rem;
+  color: #fff;
+}
+.name {
+  font-size: 1.2rem;
+  margin-bottom: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  color: #ffe066;
+}
+.route-info {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+@media (max-width: 58em) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}

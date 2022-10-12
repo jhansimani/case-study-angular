@@ -1,0 +1,8 @@
+.time-log-wrapper {
+  /* border: 2px solid #000; */
+  height: 100%;
+  list-style-type: none;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #ffe066;
+}

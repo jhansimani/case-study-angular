@@ -1,0 +1,47 @@
+.wrappper {
+  height: calc(100vh - 6.4rem);
+  padding: 24px 32px;
+}
+.text-box {
+  height: 100%;
+  border: 2px solid #fff9db;
+  padding: 32px 4.8rem;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.rotate {
+  color: #ffd43b;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.8rem;
+  animation: rotation 5s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 75em) {
+  .text-box {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 58em) {
+  .text-box {
+    padding: 3.2rem 2.4rem;
+  }
+}
+
+@media (max-width: 44em) {
+  .text-box {
+    padding: 2.4rem 3.2rem;
+  }
+}

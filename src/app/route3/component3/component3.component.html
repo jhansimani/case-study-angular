@@ -1,0 +1,7 @@
+<ul class="time-log-wrapper">
+  <li *ngFor="let time of captuedTimes">
+    <span *ngIf="time.start">Started At </span>
+    <span *ngIf="!time.start">Paused At </span>
+    <span>{{ time.time | formatdate }}</span>
+  </li>
+</ul>

@@ -1,0 +1,24 @@
+<div class="timer-wrapper">
+  <form class="timer-form" #timerForm="ngForm">
+    <label for="limit">Enter Time Limit</label>
+    <input
+      type="number"
+      id="limit"
+      name="limit"
+      [(ngModel)]="value"
+      (keyup)="onchange($event)"
+      appDigitOnly
+    />
+    <div class="btn-wrapper">
+      <button class="btn start-pause" (click)="startPause()">
+        Start/pause
+      </button>
+      <button class="btn reset" (click)="resetTimer()">reset</button>
+    </div>
+  </form>
+  <ul class="pause-list">
+    <li *ngFor="let item of pauseValues">
+      {{ item }}
+    </li>
+  </ul>
+</div>
